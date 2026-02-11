@@ -1,0 +1,37 @@
+{
+  "name": "wumingmud",
+  "version": "1.0.0",
+  "description": "无名江湖 - TUI客户端",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.tsx",
+    "build": "node esbuild.config.js",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mud",
+    "game",
+    "tui",
+    "wuxia"
+  ],
+  "author": "ivershuo",
+  "license": "MIT",
+  "dependencies": {
+    "ink": "^6.7.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.2.4",
+    "ws": "^8.19.0",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.13",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.27.3",
+    "react-devtools-core": "^6.1.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
