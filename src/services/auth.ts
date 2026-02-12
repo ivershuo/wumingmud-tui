@@ -2,7 +2,7 @@ import type { LoginRequest, RegisterRequest, AuthResponse } from '../types/api'
 import { ensureTraceId, logError, logInfo, newRequestId } from './logger'
 import * as safeStorage from './safeStorage'
 
-const API_BASE_URL = process.env.API_URL || 'http://localhost:8080/api'
+const API_BASE_URL = process.env.API_URL || 'https://wumingmud.xxooz.com/api'
 
 export class AuthRequestError extends Error {
   kind: 'network' | 'timeout' | 'http' | 'parse' | 'auth' | 'protocol'

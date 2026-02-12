@@ -4,7 +4,7 @@ import type { ConnectionStatus } from '../types/state'
 import { ensureTraceId, logError, logInfo, newRequestId } from './logger'
 import { getItem } from './safeStorage'
 
-const WS_URL = process.env.WS_URL || 'ws://localhost:8080/ws'
+const WS_URL = process.env.WS_URL || 'wss://wumingmud.xxooz.com/ws'
 const HEARTBEAT_INTERVAL = 30000
 
 class WebSocketService {

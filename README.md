@@ -2,6 +2,10 @@
 
 无名江湖客户端是一个基于 TUI 的 MUD 终端应用，负责玩家登录、世界信息展示、聊天与指令交互。
 
+MUD服务端使用：[wumingmud](https://github.com/ivershuo/wumingmud)。
+
+![wumingmud-tui screenshot](https://pa.cdnot.com/dbcbb86be76065ea.png)
+
 ## 技术栈
 
 - Node.js 18+

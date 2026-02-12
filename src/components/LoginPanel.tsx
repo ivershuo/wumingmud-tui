@@ -6,7 +6,7 @@ import { AuthRequestError, login, register } from '../services/auth'
 import { beginTrace, logError, shortTraceId } from '../services/logger'
 
 type LoginMode = 'login' | 'register'
-type LoginField = 'username' | 'password' | 'name' | 'confirmPassword'
+type LoginField = 'username' | 'password' | 'confirmPassword' | 'name'
 
 export const LoginPanel = () => {
   const [mode, setMode] = useState<LoginMode>('login')
@@ -22,7 +22,7 @@ export const LoginPanel = () => {
 
   const fieldsByMode: Record<LoginMode, LoginField[]> = {
     login: ['username', 'password'],
-    register: ['username', 'password', 'name', 'confirmPassword'],
+    register: ['username', 'password', 'confirmPassword', 'name'], 
   }
 
   const cycleField = (reverse = false) => {
@@ -167,7 +167,7 @@ export const LoginPanel = () => {
               if (mode === 'login') {
                 void handleSubmit()
               } else {
-                setActiveField('name')
+                setActiveField('confirmPassword')
               }
             }}
           />
@@ -183,7 +183,7 @@ export const LoginPanel = () => {
                 mask="*"
                 focus={activeField === 'confirmPassword'}
                 onSubmit={() => {
-                  void handleSubmit()
+                  setActiveField('name')
                 }}
               />
             </Box>
@@ -194,7 +194,7 @@ export const LoginPanel = () => {
                 value={name}
                 onChange={setName}
                 focus={activeField === 'name'}
-                onSubmit={() => setActiveField('confirmPassword')}
+                onSubmit={() => void handleSubmit()}
               />
             </Box>
           </>
