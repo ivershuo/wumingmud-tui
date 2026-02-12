@@ -1,9 +1,14 @@
 {
   "name": "wumingmud",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "无名江湖 - TUI客户端",
   "main": "dist/index.js",
   "type": "module",
+  "homepage": "https://github.com/ivershuo/wumingmud-tui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivershuo/wumingmud-tui.git"
+  },
   "scripts": {
     "dev": "tsx watch src/index.tsx",
     "build": "node esbuild.config.js",
