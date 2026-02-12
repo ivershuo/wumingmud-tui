@@ -6,7 +6,13 @@ MUD服务端使用：[wumingmud](https://github.com/ivershuo/wumingmud)。
 
 ![wumingmud-tui screenshot](https://pa.cdnot.com/dbcbb86be76065ea.png)
 
-## 技术栈
+## 进入江湖
+```bash
+npx wumingmud
+```
+
+## FOR DEVELOPERS
+### 技术栈
 
 - Node.js 18+
 - TypeScript
@@ -15,7 +21,7 @@ MUD服务端使用：[wumingmud](https://github.com/ivershuo/wumingmud)。
 - WebSocket
 - esbuild
 
-## 目录结构
+### 目录结构
 
 ```text
 .
@@ -32,12 +38,12 @@ MUD服务端使用：[wumingmud](https://github.com/ivershuo/wumingmud)。
 └── tsconfig.json
 ```
 
-## 环境要求
+### 环境要求
 
 - Node.js 18+
 - npm 9+
 
-## 快速开始
+### 快速开始
 
 ```bash
 npm install
@@ -47,7 +53,7 @@ npm run dev
 
 默认会连接 `ws://localhost:8080/ws`。如果你的服务端地址不同，请修改 `.env`。
 
-## 环境变量
+### 环境变量
 
 | 变量名 | 默认值 | 说明 |
 |---|---|---|
@@ -58,7 +64,7 @@ npm run dev
 | `CLIENT_LOG_STDOUT` | `false` | 是否输出日志到标准输出 |
 | `CLIENT_STORAGE_PATH` | `~/.wumingmud/client-storage.json` | 本地持久化路径 |
 
-## 常用命令
+### 常用命令
 
 ```bash
 npm run dev        # 开发模式
