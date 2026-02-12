@@ -176,16 +176,6 @@ export const LoginPanel = () => {
         {mode === 'register' && (
           <>
             <Box marginBottom={1}>
-              <Text color="gray">角色名: </Text>
-              <TextInput
-                value={name}
-                onChange={setName}
-                focus={activeField === 'name'}
-                onSubmit={() => setActiveField('confirmPassword')}
-              />
-            </Box>
-
-            <Box marginBottom={1}>
               <Text color="gray">确认密码:</Text>
               <TextInput
                 value={confirmPassword}
@@ -195,6 +185,16 @@ export const LoginPanel = () => {
                 onSubmit={() => {
                   void handleSubmit()
                 }}
+              />
+            </Box>
+
+            <Box marginBottom={1}>
+              <Text color="gray">角色名: </Text>
+              <TextInput
+                value={name}
+                onChange={setName}
+                focus={activeField === 'name'}
+                onSubmit={() => setActiveField('confirmPassword')}
               />
             </Box>
           </>
